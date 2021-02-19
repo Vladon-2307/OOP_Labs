@@ -10,5 +10,7 @@ package Lamda_First.data;
  * @author vlado
  */
 public class zadanie_3 {
-    
+    public static void Z_1(){
+        
+    }
 }
