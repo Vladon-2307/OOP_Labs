@@ -9,20 +9,20 @@ package Lamda_First.data;
  *
  * @author vlado
  */
-public class zadanie_1 {
+public class zadaniee_1 {
 
     public static void Z_1(int a1, int a2, int a3) {
         Zadanie_12 Summa = (x1, x2, x3) -> x1 + x2 + x3;
-        System.out.println(a1 + "+"+ a2 + "+" + a3 + "= " + Summa.calculate(a1, a2, a3));
+        System.out.println(a1 + "+" + a2 + "+" + a3 + "= " + Summa.calc(a1, a2, a3));
     }
 
     public static void Z_2(int a1, int a2, int a3) {
         Zadanie_12 Prizvidenie = (x1, x2, x3) -> x1 * x2 * x3;
-        System.out.println(a1 + "*"+ a2 + "*" + a3 + "= " +Prizvidenie.calculate(a1, a2, a3));
+        System.out.println(a1 + "*" + a2 + "*" + a3 + "= " + Prizvidenie.calc(a1, a2, a3));
     }
 
-    public static void Z_3(int a1) {
-        Zadanie_3 Factorial = x1 -> {
+    public static void Zd_3(int a1) {
+        Zadan_3 Factoria = (x1) -> {
             int rezult = 1;
             for (int i = 1; i <= x1; i++) {
                 rezult *= i;
@@ -30,12 +30,12 @@ public class zadanie_1 {
             return rezult;
         };
 
-        System.out.println(a1+"! = "+Factorial.calculate(a1));
+        System.out.println(a1 + "! = " + Factoria.calc(a1));
     }
 
     public static void Z_4(int a1) {
-        Zadanie_4 Prostoe_Chislo = (x1) -> {
-            int temp;
+        Zadane_4 Prostoe_Chisl = (int x1) -> {
+            int temp = 0;
             boolean isPrime = true;
             for (int i = 2; i <= x1 / 2; i++) {
                 temp = x1 % i;
@@ -50,23 +50,22 @@ public class zadanie_1 {
             } else {
                 return x1 + " - составное число";
             }
-
         };
-        System.out.println(Prostoe_Chislo.calculate(a1));
+        System.out.println(Prostoe_Chisl.calcu(a1));
     }
 }
 
 interface Zadanie_12 {
 
-    int calculate(int x1, int x2, int x3);
+    int calc(int x1, int x2, int x3);
 }
 
-interface Zadanie_3 {
+interface Zadan_3 {
 
-    int calculate(int x1);
+    int calc(int x1);
 }
 
-interface Zadanie_4 {
+interface Zadane_4 {
 
-    String calculate(int x1);
+    String calcu(int x1);
 }
