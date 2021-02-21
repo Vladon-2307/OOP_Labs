@@ -34,7 +34,7 @@ public class zadanie_1 {
     }
 
     public static void Z_4(int a1) {
-        Zadanie_4 Prostoe_Chislo = x1 -> {
+        Zadanie_4 Prostoe_Chislo = (x1) -> {
             int temp;
             boolean isPrime = true;
             for (int i = 2; i <= x1 / 2; i++) {

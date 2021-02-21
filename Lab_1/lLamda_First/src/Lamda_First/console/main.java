@@ -21,6 +21,8 @@ public class main {
         zadanie_2.Z_12(4);
         zadanie_2.Z_3(1, 10, 4);
         zadanie_2.Z_4(10, 5);
+        zadanie_ps.Z_1(10, 5);
+        zadanie_ps.Z_2(10, 5);
     }
 
 }

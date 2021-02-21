@@ -12,20 +12,22 @@ package Lamda_First.data;
 public class zadanie_4 {
 
     public static void Z_1(int... v) {
-        
-        Zadanie4 MAX = v1->{
-        int maxInt = v[0];
-        for (int i = 0; i < v.length; i++) {
-            if (v[i] > maxInt) {
-                maxInt = v[i];
+
+        Zadanie4 Max = (Zadanie4) (int [] v1) -> {
+            int maxInt = v1[0];
+            for (int v11 : v1) {
+                if (v11 > maxInt) {
+                    maxInt = v11;
+                }
             }
-        }
-            System.out.println("Максимальный элемент= "+ maxInt);
+            System.out.println("Максимальный элемент= " + maxInt);
         };
-        MAX.max(v);
+        Max.max(v);
     }
 }
 
-interface Zadanie4 {
-    void max(int[] v1);
+interface Zadanie4<T> {
+
+    public <T> void max(int [] v1);
+
 }
