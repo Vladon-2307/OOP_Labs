@@ -17,5 +17,9 @@ public class main {
         Lamda_Colection.Z_1();
         Lamda_Colection.Z_2();
         Lamda_Colection.Z_3();
+        Lamda_Colection.Z_4();
+        Lamda_Colection.Z_5();
+        Lamda_Colection.Z_6();
+        Lamda_Colection.Z_7();
     }
 }
