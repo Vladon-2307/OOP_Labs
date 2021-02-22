@@ -16,5 +16,6 @@ public class main {
     public static void main(String[] args) {
         Lamda_Second.Z_1();
         Lamda_Second.Z_2();
+        Lamda_Second.Z_3();
     }
 }
