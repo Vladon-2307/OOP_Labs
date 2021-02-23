@@ -33,10 +33,7 @@ public class Abiturient {
         oc.add(o3);
         return oc;
     }*/
-
-    @Override
-    public String toString() {
-        return "Abiturient{" + "FIO=" + FIO + ", o1=" + o1 + '}';
+    public void tString(){
+        System.out.println(FIO + " " + o1);
     }
-
 }
