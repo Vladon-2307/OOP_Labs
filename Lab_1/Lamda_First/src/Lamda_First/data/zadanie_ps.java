@@ -12,33 +12,38 @@ package Lamda_First.data;
 public class zadanie_ps {
 
     public static void Z_1(int a1, int a2) {
-        ZadaniePs max = (ZadaniePs) (int x1, int x2) -> {
-            if (x1 > x2) {
-                System.out.println("Max= " + x1);
-            } else if (x1 < x2) {
-                System.out.println("Max= " + x2);
-            } else {
-                System.out.println(x1 + " = " + x2);
+            ZadaniePs<Integer> max = (x1) -> {
+            if (a1 > x1) {
+                return a1;
+            }else if (a1<x1){
+                return x1;
+            }else {
+                return 0;
             }
-        };
-        max.sort(a1, a2);
+        } ;
+        if(max.compareTo(a2)==0){
+            System.out.println("Равны");
+        }else System.out.println(max.compareTo(a2));
     }
 
     public static void Z_2(int a1, int a2) {
-        ZadaniePs min = (ZadaniePs) (int x1, int x2) -> {
-            if (x1 < x2) {
-                System.out.println("Min= " + x1);
-            } else if (x1 > x2) {
-                System.out.println("Min= " + x2);
-            } else {
-                System.out.println(x1 + " = " + x2);
+        ZadaniePs<Integer> min = (x1) -> {
+            if (a1 > x1) {
+                return x1;
+            }else if (a1<x1){
+                return a1;
+            }else {
+                return 0;
             }
-        };
-        min.sort(a1, a2);
+        } ;
+        if(min.compareTo(a2)==0){
+            System.out.println("Равны");
+        }else System.out.println(min.compareTo(a2));
     }
 }
 
-interface ZadaniePs<T> {
+interface ZadaniePs<T> extends Comparable<T> {
 
-    public <t> void sort(int x1, int x2);
+    @Override
+    public int compareTo(T x1);
 }

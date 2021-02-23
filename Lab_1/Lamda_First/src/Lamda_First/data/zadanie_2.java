@@ -12,13 +12,7 @@ package Lamda_First.data;
 public class zadanie_2 {
 
     public static void Z_12(int a1) {
-        Zadanie_2_12 Chotnost = x1 -> {
-            if (x1 % 2 == 0) {
-                return x1 + " -четное";
-            } else {
-                return x1 + " -не четное";
-            }
-        };
+        Zadanie_2_12 Chotnost = x1 -> 1 % 2 == 0 ? x1 + " -четное" : x1 + " -не четное";
         System.out.println(Chotnost.calculate(a1));
     }
 

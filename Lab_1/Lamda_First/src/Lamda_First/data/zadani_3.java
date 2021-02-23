@@ -12,7 +12,7 @@ package Lamda_First.data;
 public class zadani_3 {
 
     public static void z_1(int a1, int a2, int a3) {
-        Zadanie3_12 Max = (Zadanie3_12) (x1, x2, x3) -> {
+        Zadanie3_12<Integer> Max = (Zadanie3_12) (x1, x2, x3) -> {
             int[] v1 = {x1, x2, x3};
             int maxInt = v1[0];
             for (int v11 : v1) {
@@ -26,7 +26,7 @@ public class zadani_3 {
     }
 
     public static void z_2(int a1, int a2, int a3) {
-        Zadanie3_12 Min = (Zadanie3_12) (x1, x2, x3) -> {
+        Zadanie3_12<Integer> Min = (Zadanie3_12) (x1, x2, x3) -> {
             int[] v1 = {x1, x2, x3};
             int maxInt = v1[0];
             for (int v11 : v1) {
