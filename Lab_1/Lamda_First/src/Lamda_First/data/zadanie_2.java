@@ -5,6 +5,7 @@
  */
 package Lamda_First.data;
 
+import java.util.function.Predicate;
 /**
  *
  * @author vlado
@@ -12,8 +13,8 @@ package Lamda_First.data;
 public class zadanie_2 {
 
     public static void Z_12(int a1) {
-        Zadanie_2_12 Chotnost = x1 -> 1 % 2 == 0 ? x1 + " -четное" : x1 + " -не четное";
-        System.out.println(Chotnost.calculate(a1));
+        Predicate<Integer> Chotnost = x1 -> 1 % 2 == 0;
+        System.out.println(Chotnost.test(a1));
     }
 
     public static void Z_3(int a1, int a2, int a3) {
@@ -39,17 +40,9 @@ public class zadanie_2 {
     }
 }
 
-interface Zadanie_2_12 {
-
-    String calculate(int x1);
-}
-
-interface Zadanie_2_3 {
-
+interface Zadanie_2_3{
     String calculate(int d1, int d2, int ch);
 }
-
-interface Zadanie_2_4 {
-
+interface Zadanie_2_4{
     String calculate(int A, int x2);
 }

@@ -5,6 +5,7 @@
  */
 package Lamda_First.data;
 
+import java.util.function.UnaryOperator;
 /**
  *
  * @author vlado
@@ -22,7 +23,7 @@ public class zadaniee_1 {
     }
 
     public static void Zd_3(int a1) {
-        Zadan_3 Factoria = (x1) -> {
+        UnaryOperator<Integer> Factoria = (x1) -> {
             int rezult = 1;
             for (int i = 1; i <= x1; i++) {
                 rezult *= i;
@@ -30,7 +31,7 @@ public class zadaniee_1 {
             return rezult;
         };
 
-        System.out.println(a1 + "! = " + Factoria.calc(a1));
+        System.out.println(a1 + "! = " + Factoria.apply(a1));
     }
 
     public static void Z_4(int a1) {
@@ -58,11 +59,6 @@ public class zadaniee_1 {
 interface Zadane_12 {
 
     int calc(int x1, int x2, int x3);
-}
-
-interface Zadan_3 {
-
-    int calc(int x1);
 }
 
 interface Zadane_4 {
