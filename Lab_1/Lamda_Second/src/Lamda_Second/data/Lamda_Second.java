@@ -22,10 +22,10 @@ public class Lamda_Second {
         upperCase = (int) s.chars().sorted().filter(new IntPredicate() {
             @Override
             public boolean test(int s) {
-                return s >= 65 && s <= 90;
+                return s < 65 || s > 90;
             }
         }).count();
-        System.out.println("В этом предложении общее КОЛИЧЕСТВО строчних букв =  " + upperCase);
+        System.out.println("В этом предложении общее количество строчных букв =  " + upperCase);
     }
 
     public static void Z_2() {
@@ -58,7 +58,7 @@ public class Lamda_Second {
         upperCase = (int) s.chars().sorted().filter(new IntPredicate() {
             @Override
             public boolean test(int s) {
-                return s >= 65 && s <= 90;
+                return s <= 65 || s >= 90;
             }
         }).count();
         return upperCase;
