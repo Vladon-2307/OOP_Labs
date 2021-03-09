@@ -53,8 +53,8 @@ public class Lamda_Colection {
         list.add(832);
         List<Integer> Summs = new ArrayList();
         for (int i = 0; i < list.size(); i++) {
-            int sum = String.valueOf(list.get(i)).chars().map(Character::getNumericValue).sum();
-            Summs.add(sum);
+            //int sum = String.valueOf(list.get(i)).chars().map(Character::getNumericValue).sum();
+            Summs.add(String.valueOf(list.get(i)).chars().map(Character::getNumericValue).sum());
         }
         int Max_sum = Summs.stream().reduce(Integer::max).get();
         System.out.println("Максимальная сумма цифр= " + Max_sum);
