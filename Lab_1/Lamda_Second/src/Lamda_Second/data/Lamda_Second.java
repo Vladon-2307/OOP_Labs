@@ -55,12 +55,7 @@ public class Lamda_Second {
     public static int UperCase(String s) {
         
         int upperCase;
-        upperCase = (int) s.chars().sorted().filter(new IntPredicate() {
-            @Override
-            public boolean test(int s) {
-                return s <= 65 || s >= 90;
-            }
-        }).count();
+        upperCase = (int) s.chars().sorted().filter((int s1) -> s1 <= 65 || s1 >= 90).count();
         return upperCase;
     }
 }
