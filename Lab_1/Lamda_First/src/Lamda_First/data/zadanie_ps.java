@@ -12,38 +12,16 @@ package Lamda_First.data;
 public class zadanie_ps {
 
     public static void Z_1(int a1, int a2) {
-            ZadaniePs<Integer> max = (x1) -> {
-            if (a1 > x1) {
-                return a1;
-            }else if (a1<x1){
-                return x1;
-            }else {
-                return 0;
-            }
-        } ;
-        if(max.compareTo(a2)==0){
-            System.out.println("Равны");
-        }else System.out.println(max.compareTo(a2));
+            ZadaniePs<Integer> max = (a, b) -> a.compareTo(b) >= 1 ? a : b;
+            System.out.println(max.compar(12, 10));
     }
 
     public static void Z_2(int a1, int a2) {
-        ZadaniePs<Integer> min = (x1) -> {
-            if (a1 > x1) {
-                return x1;
-            }else if (a1<x1){
-                return a1;
-            }else {
-                return 0;
-            }
-        } ;
-        if(min.compareTo(a2)==0){
-            System.out.println("Равны");
-        }else System.out.println(min.compareTo(a2));
+        ZadaniePs<Integer> min = (a, b) -> a.compareTo(b) <= 1 ? a : b;
+        System.out.println(min.compar(12, 10));
     }
 }
 
-interface ZadaniePs<T> extends Comparable<T> {
-
-    @Override
-    public int compareTo(T x1);
+interface ZadaniePs<T extends Comparable> {
+    T compar(T a, T b);
 }
