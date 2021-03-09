@@ -5,9 +5,6 @@
  */
 package Lamda_Colection.data;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author vlado
@@ -15,7 +12,7 @@ import java.util.List;
 public class Abiturient {
 
     public String FIO;
-    int o1;
+    public int o1;
     //int o2;
     //int o3;
 
@@ -33,7 +30,13 @@ public class Abiturient {
         oc.add(o3);
         return oc;
     }*/
-    public void tString(){
-        System.out.println(FIO + " " + o1);
+    @Override
+    public String toString() {
+        return FIO + " " + o1;
     }
+    
+    public static void tostring(Abiturient s){
+        System.out.println(s.FIO + " " + s.o1);
+    }
+
 }

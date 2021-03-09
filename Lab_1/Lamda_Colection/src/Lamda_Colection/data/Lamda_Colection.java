@@ -123,11 +123,11 @@ public class Lamda_Colection {
         spisoc.add(new Abiturient("Ila D. D.", 10));
         spisoc.add(new Abiturient("Tola W. R.", 10));
         spisoc.add(new Abiturient("Nikto E. F.", 10));
-        
-        
-        int max_ocenka = spisoc.stream().mapToInt((s)->s.o1).max().getAsInt();
-        System.out.println("Max ocenka = "+ max_ocenka);
-        
-        System.out.println(spisoc.stream().filter((s)->s.o1== max_ocenka).map(s -> s.FIO).toString());
+
+        int max_ocenka = spisoc.stream().mapToInt((s) -> s.o1).max().getAsInt();
+        System.out.println("Max ocenka = " + max_ocenka);
+
+        //System.out.println(spisoc.stream().filter((s) -> s.o1 == max_ocenka).toString());
+        spisoc.stream().filter((s)->s.o1== max_ocenka).forEachOrdered((s)->Abiturient.tostring(s));
     }
 }
