@@ -52,8 +52,8 @@ public class Lamda_Colection {
         list.add(632);
         list.add(832);
         List<Integer> Summs = new ArrayList();
-        list.stream().map(String::valueOf).forEach(s->Summs.add(s.chars().sum()));
-        int Max_sum = Summs.stream().reduce(Integer::max).get();
+        list.stream().map(String::valueOf).forEach(s -> Summs.add(Arrays.stream(s.split("")).mapToInt(Integer::parseInt).sum()));
+        int Max_sum = Summs.stream().max(Integer::compare).get();
         System.out.println("Максимальная сумма цифр= " + Max_sum);
     }
 
@@ -114,17 +114,17 @@ public class Lamda_Colection {
 
     public static void Z_7() {
         List<Abiturient> spisoc = new ArrayList<>();
-        spisoc.add(new Abiturient("Vitalik V. V.", 10));
-        spisoc.add(new Abiturient("Vladislav E. R.", 7));
-        spisoc.add(new Abiturient("Kiril F. F.", 10));
-        spisoc.add(new Abiturient("Ila D. D.", 10));
-        spisoc.add(new Abiturient("Tola W. R.", 10));
-        spisoc.add(new Abiturient("Nikto E. F.", 10));
+        spisoc.add(new Abiturient("Vitalik V. V.", 10, 5, 5));
+        spisoc.add(new Abiturient("Vladislav E. R.", 7, 4, 5));
+        spisoc.add(new Abiturient("Kiril F. F.", 10, 5, 5));
+        spisoc.add(new Abiturient("Ila D. D.", 10, 10, 5));
+        spisoc.add(new Abiturient("Tola W. R.", 10, 5, 5));
+        spisoc.add(new Abiturient("Nikto E. F.", 5, 5, 10));
 
-        int max_ocenka = spisoc.stream().mapToInt((s) -> s.o1).max().getAsInt();
+        int max_ocenka = spisoc.stream().mapToInt(s->s.get().stream().max(Integer::compare).get()).max().getAsInt();
         System.out.println("Max ocenka = " + max_ocenka);
 
         //System.out.println(spisoc.stream().filter((s) -> s.o1 == max_ocenka).toString());
-        spisoc.stream().filter((s)->s.o1== max_ocenka).forEachOrdered((s)->Abiturient.tostring(s));
+        spisoc.stream().filter((s) -> s.o1 == max_ocenka || s.o2 == max_ocenka || s.o3 == max_ocenka).forEachOrdered((s) -> Abiturient.tostring(s));
     }
 }
