@@ -19,6 +19,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String url = in.nextLine();
         while(!url.equals("")){
+            System.out.println("Введите путь к файелу");
             S.addFile(url);
             url = in.nextLine();
         }
@@ -28,8 +29,21 @@ public class Main {
 //        S.addFile("E:\\OOP\\Labs\\Lab_2\\Threads\\src\\Files\\non.txt");
         S.startSearch();
     }
+    
+    public static void z2(){
+        //E:\\OOP\\Labs\\Lab_2\\Threads\\src\\Files
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите путь к котологк");
+        String url = in.nextLine();
+        System.out.println("Введите тип искомого файла");
+        String tip = in.nextLine();
+        SearchFiles files = new SearchFiles(url, ".txt");
+        files.start();
+    }
 
     public static void main(String[] args) {
         z1();
+        z2();
+        
     }
 }
