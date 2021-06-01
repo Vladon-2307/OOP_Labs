@@ -21,12 +21,12 @@ public class Gaika extends Thread {
     public void run() {
         work();
     }
-    
-    private synchronized void work(){
+
+    private void work() {
         try {
             for (int i = 0; i < count; i++) {
                 sleep(3000);
-                Krepesh.isGaika++;
+                Krepesh.countGaika++;
             }
         } catch (InterruptedException ex) {
             ex.printStackTrace();

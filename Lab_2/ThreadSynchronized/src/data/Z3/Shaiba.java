@@ -21,12 +21,12 @@ public class Shaiba extends Thread {
     public void run() {
         work();
     }
-    
-    private synchronized void work(){
+
+    private void work() {
         try {
             for (int i = 0; i < count; i++) {
                 sleep(2000);
-                Krepesh.isShaiba++;
+                Krepesh.countShaiba++;
             }
         } catch (InterruptedException ex) {
             ex.printStackTrace();

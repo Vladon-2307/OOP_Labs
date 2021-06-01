@@ -22,11 +22,11 @@ public class Vint extends Thread {
         work();
     }
 
-    private synchronized void work() {
+    private void work() {
         try {
             for (int i = 0; i < count; i++) {
                 sleep(1000);
-                Krepesh.isVint++;
+                Krepesh.countVint++;
             }
         } catch (InterruptedException ex) {
             ex.printStackTrace();
